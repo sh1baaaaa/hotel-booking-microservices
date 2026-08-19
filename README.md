@@ -1,3 +1,3 @@
-Hotel booking service.
+# Hotel booking service.
 
 In progress
