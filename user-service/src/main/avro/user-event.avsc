@@ -1,0 +1,21 @@
+{
+  "type": "record",
+  "name": "UserEvent",
+  "namespace": "com.shiba.event",
+  "doc": "Событие пользователя, передаваемое через Kafka. Схема хранится в Schema Registry и версионируется. Каждый сервис имеет свою копию этого файла и генерирует Java-класс независимо.",
+  "fields": [
+    { "name": "userId",    "type": "string", "doc": "UUID пользователя - общий идентификатор между сервисами" },
+    { "name": "email",     "type": "string" },
+    { "name": "username", "type": "string" },
+    { "name": "lastName",  "type": "string" },
+    { "name": "firstName", "type": "string" },
+    {
+      "name": "eventType",
+      "type": {
+        "type": "enum",
+        "name": "EventType",
+        "symbols": ["USER_REGISTERED", "USER_UPDATED", "USER_DELETED"]
+      }
+    }
+  ]
+}
