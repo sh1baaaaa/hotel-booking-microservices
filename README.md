@@ -6,7 +6,7 @@
 - PostgreSQL
 - Elasticsearch
 - Redis
-- Kafka (with avro)
+- Kafka (with Avro-schemas)
 - Docker
 
 In progress
