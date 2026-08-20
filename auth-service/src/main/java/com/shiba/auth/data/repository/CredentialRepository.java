@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
+import java.util.UUID;
 
 @Repository
 public interface CredentialRepository extends JpaRepository<CredentialEntity, Long> {
@@ -14,4 +15,6 @@ public interface CredentialRepository extends JpaRepository<CredentialEntity, Lo
     Optional<CredentialEntity> findByUsername(String username);
 
     boolean existsByUsername(String username);
+
+    void deleteByUserId(UUID userId);
 }
