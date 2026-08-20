@@ -14,8 +14,20 @@
       "type": {
         "type": "enum",
         "name": "EventType",
-        "symbols": ["USER_REGISTERED", "USER_UPDATED", "USER_DELETED"]
+        "symbols": [
+                  "USER_REGISTERED",
+                  "USER_CREATED",
+                  "USER_CREATION_FAILED",
+                  "USER_UPDATED",
+                  "USER_DELETED"
+                ]
       }
+    },
+    {
+       "name": "errorReason",
+       "type": ["null", "string"],
+       "default": null,
+       "doc": "Причина ошибки - заполняется только при USER_CREATION_FAILED"
     }
   ]
 }
