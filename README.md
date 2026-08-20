@@ -3,6 +3,7 @@
 ## Technology stack:
 - Java 21
 - Spring Framework (Boot / Web / Security / Data JPA / Cloud)
+- Axon Framework
 - PostgreSQL
 - Elasticsearch
 - Redis
