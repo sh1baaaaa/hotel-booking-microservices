@@ -27,8 +27,7 @@ public class JwtAuthFilter implements GlobalFilter, Ordered {
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         ServerHttpRequest request = exchange.getRequest();
 
-        if (request.getURI().getPath().contains("/auth/login") ||
-                request.getURI().getPath().contains("/auth/register")) {
+        if (request.getURI().getPath().contains("/api/v1/auth")) {
             return chain.filter(exchange);
         }
 
@@ -72,6 +71,6 @@ public class JwtAuthFilter implements GlobalFilter, Ordered {
 
     @Override
     public int getOrder() {
-        return -1; // Фильтр должен выполниться как можно раньше (высокий приоритет)
+        return -1;
     }
 }
